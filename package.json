@@ -1,0 +1,26 @@
+{
+  "name": "platzi-js-profesional",
+  "version": "1.0.0",
+  "description": "Proyecto del curso profesional de Javascript de la Escuela de JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hijuliancode/platzi-js-profesional.git"
+  },
+  "keywords": [
+    "platzi",
+    "javascript"
+  ],
+  "author": "hijuliancode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hijuliancode/platzi-js-profesional/issues"
+  },
+  "homepage": "https://github.com/hijuliancode/platzi-js-profesional#readme"
+}
