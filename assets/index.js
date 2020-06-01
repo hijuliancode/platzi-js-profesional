@@ -16,6 +16,12 @@ MediaPlayer.prototype.pause = function() {
   played = false
   this.media.pause()
 }
+MediaPlayer.prototype.togglePlay = function() {
+  (this.media.paused)
+    ? this.play()
+    : this.pause()
+  ;
+}
 
 const player = new MediaPlayer({ el: video })
-button.onclick = () => played ? player.pause() : player.play()
+button.onclick = () => player.togglePlay()
