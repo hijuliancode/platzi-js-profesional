@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h3 class="text-center">Closures</h3>
+    <ul>
+      <li><a href="/ejercicios/index.html">Atras</a></li>
+    </ul>
+    <p>Son funciones que regresan una función o un objeto con funciones que mantienen las variables que fueron declaradas fuera de su scope.</p>
+    <p>Los closures nos sirven para tener algo parecido a variables privadas, característica que no tiene JavaScript por default. Es decir encapsulan variables que no pueden ser modificadas directamente por otros objetos, sólo por funciones pertenecientes al mismo.</p>
+  </div>
+  <script> // Closures
+    // printColor
+
+    // let color = 'green'
+    // function printColor() {
+    //   console.log(color);
+    // }
+    // printColor()
+
+    // IFFE - Immediately Invoked Function Expression
+    // Closure: Es la combinación del Scope de una función y la función donde fue definida
+  
+    // funciones que regresan funciones
+    // function makeColorPrinter(color) {
+    //   let colorMessage = `The color is ${color}`
+    //   return function() {
+    //     console.log(colorMessage )
+    //   }
+    // }
+    // let greenColorPrinter = makeColorPrinter('Green')
+    // console.log(greenColorPrinter());
+
+    // variables privadas
+    function makeCounter(n) {
+      let count = n
+      return {
+        increase: function () {
+          count += 1
+        },
+        decrease: function () {
+          count -= 1
+        },
+        getCount: function () {
+          return count
+        }
+      }
+    }
+    let counter = makeCounter(7)
+
+    console.log('get', counter.getCount())
+    console.log('increase', counter.increase())
+    console.log('increase', counter.increase())
+    console.log('increase', counter.increase())
+    console.log('increase', counter.increase())
+    console.log('get', counter.getCount())
+    console.log('decrease', counter.decrease())
+    console.log('decrease', counter.decrease())
+    console.log('get', counter.getCount())
+
+
+  </script>
+</body>
+</html>
