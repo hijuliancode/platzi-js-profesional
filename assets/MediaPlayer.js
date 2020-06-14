@@ -11,11 +11,9 @@ MediaPlayer.prototype._initPlugins = function() {
   })
 }
 MediaPlayer.prototype.play = function() {
-  console.log('play')
   this.media.play()
 }
 MediaPlayer.prototype.pause = function() {
-  console.log('pause')
   this.media.pause()
 }
 MediaPlayer.prototype.togglePlay = function() {
@@ -29,6 +27,12 @@ MediaPlayer.prototype.mute = function() {
 }
 MediaPlayer.prototype.unmute = function() {
   this.media.muted = false
+}
+MediaPlayer.prototype.toggleMute = function() {
+  (this.media.muted)
+    ? this.unmute()
+    : this.mute()
+  ;
 }
 
 export default MediaPlayer
